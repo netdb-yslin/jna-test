@@ -13,7 +13,7 @@ import com.sun.jna.ptr.PointerByReference;
 public class TestClass {
 
 	private static int ITER_COUNT = 10000;
-	private static int RUN_PER_ITER = 100;
+	private static int RUN_PER_ITER = 500;
 	private static int THREAD_COUNT = 10;
 
 	public static void main(String[] args) throws InterruptedException {
@@ -83,7 +83,7 @@ public class TestClass {
 	}
 
 	static class Task {
-		Pointer pointer;
+		private Pointer pointer;
 		private long numOfRun = 0;
 		private int sum = 0; // in nanoseconds
 		private long max = 0; // in nanoseconds
